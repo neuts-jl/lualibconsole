@@ -5,6 +5,7 @@
 --   Date        : 01/02/2024
 --
 --   Description : Console Mode Keyboard Management Library
+--                 Uses https://github.com/neuts-jl/readkey
 --
 --   This program is free software: you can redistribute it and/or modify it
 --   under the terms of the GNU General Public License as published by the Free
