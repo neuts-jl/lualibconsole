@@ -30,7 +30,7 @@ Color.BLUE    = 34
 Color.MAGENTA = 35
 Color.CYAN    = 36
 Color.WHITE   = 37
-Color.GRAY    = 90  
+Color.GRAY    = 90
 Color.LIGHT_RED     = 91
 Color.LIGHT_GREEN   = 92
 Color.LIGHT_YELLOW  = 93
@@ -71,7 +71,7 @@ function Screen:underline()
 end
 
 function Screen:setCursorPos(x, y)
-	io.write("\27[" .. y .. ";" .. x .. "H")
+  io.write("\27[" .. y .. ";" .. x .. "H")
 end
 
 function Screen:setCursorOff()
@@ -83,19 +83,19 @@ function Screen:setCursorOn()
 end
 
 function Screen:setForeground(color)
-  io.write("\27["..color.."m") 
+  io.write("\27["..color.."m")
 end
 
 function Screen:setBackground(color)
-  io.write("\27["..(color+10).."m") 
+  io.write("\27["..(color+10).."m")
 end
 
 function Screen:defColor()
-	self:setForeground(Color.DEFAULT)
+  self:setForeground(Color.DEFAULT)
 end
 
 function Screen:defCursorPos()
-	self:setCursor(Screen.default_x, Screen.default_y)
+  self:setCursor(Screen.default_x, Screen.default_y)
 end
 
 function Screen:beep()
@@ -104,7 +104,7 @@ end
 
 function Screen:getSize()
   local result = io.popen("mode con"):read("a*")
-  
+
   local lines, columns
 
   for line in result:gmatch("[^\r\n]+") do
